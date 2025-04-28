@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Welcome | The Scribe's Ledger</title>
+
+    <!-- link to css files -->
+    <link rel="stylesheet" href="css_files/welcome.css">
+
+    <!-- link to java script -->
+    <script src="js_files/welcome.js" defer></script>
+    
+</head>
+<body>
+    <!-- navigation -->
+    <nav>
+        <!-- main container -->
+        <div class="navbar_wrapper">
+            <div class="navbar_container">
+                <!-- logo -->
+                <div class="navbar_logo">
+                    <a href="homepage.html">welcome</a>
+                    <!-- <a href="welcome.html">the scribe's ledger</a> -->
+                </div>
+
+                <!-- nav links -->
+                <div class="navbar_links_div">
+                    <ul class="navbar_links_ul">
+                        <li><a href="#history.html">history</a></li>
+                        <li><a href="#settings">settings</a></li>
+                        <li><a href="welcome.html">about</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main body starts here -->
+    <main>
+        <!-- outermost container -->
+        <div class="main_body_container">
+            <div class="outer_div">
+                <div class="par msg1">
+                    <p class="p1">lo, weary traveler! welcome to thy sanctuary of thoughts</p>
+                </div>
+
+                <!-- card pair -->
+                <div class="card_pair" id="card_pair">
+                    <div class="par text msg2">
+                        <div class="quill-icon">✒️</div>
+                        <p class="p2">here, thou shalt find a haven for thy musings, a refuge for thy
+                            reflections, and a canvas for thy dreams. in this sacred space, thou
+                            art free to express thyself without fear or judgement.
+                        </p>
+                    </div>
+                    <div class="par text msg3">
+                        <div class="scroll-icon">📜</div>
+                        <p class="p3">
+                        here, thou shalt chronicle thy moods, set forth thy goals and reflect
+                        upon days gone by. Patterns shall emerge, wisdom shall grow, and in time,
+                        clarity shall be thine.</p>
+                    </div>
+                </div>
+
+                <!-- add buttons to action card -->
+                <div class="par  msg4" id="msg4">
+                    <p class="p4">Step forth, noble Scribe, and let thy quill dance!
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn-signup" id="btn-signup">Sign Up</button>
+                        <button class="btn-login" id="btn-login">log in</button>
+                    </div>
+                    <p class="p4"> and begin thy jouney today!</p>
+                    <div class="wax-seal">♔</div>                    
+                </div>
+
+                <!-- tab divider -->
+                <!-- <div class="tab_selector">
+                    <button class="tab_btn active" id="login_tab">Log In</button>
+                    <button class="tab_btn" id="signup_tab">Sign Up</button>
+                </div> -->
+            </div>
+
+            <!-- login/signup container -->
+            <div class="login_signup_form" id="login_signup_form">
+                <!-- tab divider -->
+                <div class="tab_selector">
+                    <button class="tab_btn active" id="login_tab">Log In</button>
+                    <button class="tab_btn" id="signup_tab">Sign Up</button>
+                </div>
+                
+                <!-- login form -->
+                <form id="login_form" class="scribe_form">
+                    <!-- enter username -->
+                    <div class="form_field">
+                        <label for="username">Thy Quill's Mark:</label>
+                        <input type="text" id="username" name="username" placeholder="e.g. Azkaban404" required>
+                    </div>
+                    <!-- enter password -->
+                    <div class="form_field">
+                        <label for="password">Thy Secret Ink:</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <!-- submit button -->
+                    <button type="submit" class="ancient_btn">unlock thy chronicle</button>
+                </form>
+
+                <!-- signup form -->
+                <form id="signup_form" class="scribe_form">
+                    <!-- signup name -->
+                    <div class="form_field">
+                        <label for="signup_name">Scribe's Name</label>
+                        <input type="text" id="signup_name" placeholder="Azkaban Prisoner" required>
+                    </div>
+                    <!-- signup username -->
+                    <div class="form_field">
+                        <label for="signup_username">Thy Quill's Mark:</label>
+                        <input type="text" id="signup_username" placeholder="Azkaban404" required>
+                    </div>
+                    <!-- signup password -->
+                    <div class="form_field">
+                        <label for="signup_password">Thy Secret Ink:</label>
+                        <input type="password" id="signup_password" placeholder="••••••••" required>
+                    </div>
+                    <!-- confirm password -->
+                    <div class="form_field">
+                        <label for="confirm_password">Confirm Thy Secret Ink:</label>
+                        <input type="password" id="confirm_password" placeholder="••••••••" required>
+                    </div>
+
+                    <!-- submit button -->
+                    <button type="submit" class="ancient_btn">Seal thy Enrollment</button>
+
+                </form>
+            </div>
+
+            
+        </div>
+    </main>
+    
+</body>
+</html>

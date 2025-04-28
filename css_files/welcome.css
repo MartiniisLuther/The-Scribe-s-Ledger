@@ -1,0 +1,493 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Barriecito&family=Over+the+Rainbow&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap'
+);
+
+/* to all elements on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.2s linear;
+}
+
+/* to the html properties */
+html {
+    font-size: 62.5%;
+}
+
+/* body tag */
+body {
+    background-color: snow;
+}
+
+/* navigation- outermost div */
+.navbar_wrapper {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: snow;
+}
+
+/* container nav*/
+.navbar_container {
+    display: flex;
+    max-width: 1440px;
+    margin: 1rem auto;
+    align-items: center;
+    padding: 0 20px;
+    height: 8.1vh;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* border: 1px solid crimson; */
+    font-family: "Over the Rainbow", cursive;
+}
+
+/*logo div  */
+.navbar_logo {
+    /* padding: 2rem 0; */
+    /* width: 50%; */
+}
+
+/* logo a tag*/
+.navbar_logo a {
+    font-size: 5rem;
+    color: crimson;
+    padding: 1rem;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    /* font-family: 'Sour Gummy'; */
+    /* font-family: "Over the Rainbow", cursive; */
+}
+
+/* navigation links ul */
+.navbar_links_ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* links li */
+.navbar_links_ul li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+/* links a */
+.navbar_links_ul a {
+    display: flex;
+    text-decoration: none;
+    color: palevioletred;
+    color: crimson;
+    /* font-family: "Over the Rainbow", cursive; */
+    font-weight: 700;
+    cursor: pointer;
+    background-color: goldenrod;
+    padding: 5px;
+    border-radius: 70%;
+}
+
+/*nav links hover effect */
+.navbar_links_ul a:hover {
+    background-color: rgba(218, 165, 32, 0.2);
+}
+
+/* here styles the body section after the navigation */
+/* make the background appear like a notebook page */
+.main_body_container {
+    margin: 8vh auto; /* Center the container vertically */
+    /* width: 50%; */
+    min-height: 80vh; /* Adjust height later as it should be dynamic */
+    max-width: 1440px;
+    max-width: 1100px;
+    padding: 20px;
+    background-color: #fef5c3; /* Warm yellow paper */
+    border: 1px solid #d1b47f; /* Slightly darker border */
+    border-top: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    /* Notebook lines */
+    background:
+        linear-gradient(to bottom, transparent 95%, #d9d2b6 95%),
+        repeating-linear-gradient(white 0px, white 24px, transparent 25px);
+    background-size: 100% 25px;
+    position: relative;
+    overflow: visible;
+}
+
+/* tear effect at bottom */
+.main_body_container::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: 
+        radial-gradient(circle at 10px 15px, transparent 10px, #f8f1e0 11px),
+        radial-gradient(circle at 20px 15px, transparent 10px, #f8f1e0 11px);
+    background-size: 20px 30px;
+    background-repeat: repeat-x;
+}
+
+/* div after the main background div */
+.outer_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* common card styles */
+.par.text {
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* hover effect on all the card styles */
+.par.text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* styles the first (header) message card div */
+.msg1 {
+    border-radius: 5px;
+    width: 100%;
+    /* box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.1); */
+    padding: 2rem;
+}
+
+/* styles the first paragraph */
+.p1 {
+    font-family: 'Barriecito';
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(0, 128, 128); /* Darker text for contrast */
+    line-height: 1.5; /* Match the horizontal lines */
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.wax-seal {
+    background: #c13c2e;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+/* side by side  pair - 1st & 2nd cards */
+.card_pair {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 3rem 0;
+
+    /* display: none; */
+}
+
+/* styles the first card message  */
+.msg2 {
+    background-color: rgba(254, 245, 195, 0.9);
+    border-radius:0px 0px 10px 0;
+    width: 45%;
+    padding: 2.5rem;
+    border-left: 6px solid #d4a017;
+    box-shadow: 
+        -5px 5px 15px rgba(0, 0, 0, 0.1),
+        inset 10px 0 15px -10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+    position: relative;
+    z-index: 1;
+}
+
+/* styles the quill & scroll icons*/
+.quill-icon, .scroll-icon {
+    font-size: 2rem;
+    /* position: absolute; */
+    opacity: 0.8;
+}
+
+
+
+/* text for the first card paragraph */
+.p2 {
+    /* font-family: 'Over the Rainbow'; */
+    font-family: 'Sour Gummy';
+    font-size: 2rem;
+    font-weight: 400 900;
+    color: #5a4a3a;
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* styles the second message card div*/
+.msg3 {
+    background-color: rgb(195, 254, 250); 
+    width:55%;
+    align-self: flex-end;
+    padding: 3rem 2.5rem;
+    border-right: 4px solid #20b2aa;
+
+    box-shadow: 
+        5px 5px 15px rgba(0, 0, 0, 0.1),
+        inset -10px 0 15px -10px rgba(0, 0, 0, 0.1)
+    ;
+    transform: rotate(1deg);
+    position: relative;
+    top: 50px;
+    margin-left: -1%;
+}
+
+/* styles the second card paragraph */
+.p3 {
+    font-family: 'Tektur';
+    font-size: 2rem;
+    font-weight: 400 900;
+    color: rgb(0, 128, 128);
+    text-align: right;
+    line-height: 1.6;
+    /* text-transform: capitalize; */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+
+
+/* adds quaotation style elements */
+.msg2::before {
+    content: "❝";
+    font-size: 4rem;
+    color: rgba(236, 10, 10, 0.1);
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+}
+
+.msg3::after {
+    content: "❞";
+    font-size: 4rem;
+    color: rgba(248, 3, 195, 0.1);
+    position: absolute;
+    bottom: -2rem;
+    right: 1rem;
+}
+
+/* styles the third card message - action card */
+.msg4 {
+    background-color: rgba(254, 245, 195, 0.9);
+    background: none;
+    width: 70%;
+    padding: 2rem;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    margin: 3rem 0;
+    text-align: center;
+
+    /* display: none; */
+}
+
+/* styles the fourth paragraph */
+.p4 {
+    font-family: 'Barriecito', cursive;
+    font-size: 2rem;
+    color: #dc143c;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* buttons div */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* buttons */
+.btn-signup, .btn-login {
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    font-family: 'Barriecito', cursive;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+/* signup button */
+.btn-signup {
+    background-color: #20b2aa;
+}
+
+/* login button */
+.btn-login {
+    background-color: #d4a017;
+}
+
+/* hover effect on buttons */
+.btn-signup:hover, .btn-login:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* shake effect on the buttons */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+/* styles the login - signup form */
+
+/* form div */
+.login_signup_form {
+    display: none;
+}
+
+
+/* tab-selector */
+.tab_selector {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+/* tab-selector button */
+.tab_btn {
+    background: none;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-family: 'Tektur';
+    font-size: 2rem;
+    color: #5a4a3a;
+    cursor: pointer;
+    position: relative;
+}
+
+/* tab-selector button active effect */
+.tab_btn.active {
+    color: #d4a017;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* tab-selector button active after effect */
+.tab_btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1rem;
+    background-color: #8b7355;
+    background: #d4a017;
+    border-radius: 2px;
+}
+
+/* styles the form */
+.scribe_form {
+    display: none;
+
+    width: 100%;
+    max-width: 300px;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(212, 160, 23, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* current active form */
+.scribe_form.active {
+    display: block;
+}
+
+/* styles the form field */
+.form_field {
+    margin-bottom: 2rem;
+}
+
+/* styles the form field label */
+.form_field label {
+    display: block;
+    font-family: 'Tektur';
+    color: #5a4a3a;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* styles the form field input */
+.form_field input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d1b47f;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Tektur';
+    font-size: 1.5rem;
+    /* border-radius: 5px; */
+}
+
+/* styles the form field input focus effect */
+.form_field input:focus {
+    outline: 2px solid #d4a017;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* styles the form field input error effect */
+/* .form_field input.error {
+    border: 1px solid crimson;
+    background: rgba(255, 0, 0, 0.1);
+    color: crimson;
+} */
+
+/* styles the buttons for login - signup */
+.ancient_btn {
+    width: 100%;
+    padding: 1rem;
+    background: #20b2aa;
+    color: white;
+    border: none;
+    font-family: 'Barriecito', cursive;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* styles the buttons for login - signup hover effect */
+.ancient_btn:hover {
+    background: #1a9c95;
+    transform: translateY(-2px);
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | The Scribe's Ledger</title>
+
+    <!-- link to css files -->
+    <link rel="stylesheet" href="css_files/homepage.css">
+    <link rel="stylesheet" href="css_files/welcome.css">
+
+    <!-- link to java script -->
+    <script src="js_files/homepage.js" defer></script>
+    <!-- <script src="js_files/welcome.js" defer></script> -->
+    <!-- link to graphing library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script> -->
+
+
+</head>
+<body>
+    <!-- navigation -->
+    <nav>
+        <!-- main container -->
+        <div class="navbar_wrapper">
+            <div class="navbar_container">
+                <!-- logo -->
+                <div class="navbar_logo">
+                    <a href="homepage.html">dashboard</a>
+                    <!-- <a href="welcome.html">the scribe's ledger</a> -->
+                </div>
+
+                <!-- nav links -->
+                <div class="navbar_links_div">
+                    <ul class="navbar_links_ul">
+                        <li><a href="#history.html">history</a></li>
+                        <li><a href="#settings">settings</a></li>
+                        <li><a href="welcome.html">about</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--  main body starts here --> 
+    <main>
+        <!-- outermost container -->
+        <div class="main_body_container">
+            <div class="outer_div">
+                <!-- this is for the title message -->
+                <div class="par msg1">
+                    <p class="p1">lo, <span id="reg_name">Azkaban404</span> ! welcome back to thy sactuary.</p>
+                </div>
+
+                <!-- div contains the date -->
+                <div class="date_div">
+                    <p class="date"> <span id="date"></span></p>
+                </div> 
+
+                <!-- div for the content -->
+                <div class="records_container">
+                    <!-- left side div for the graph -->
+                    <div class="graph_div graph_controls">
+                        <canvas id="lineGraph" width="900" height="800"></canvas>
+                        <!-- <button id="resetGraph" class="graph_buttons">Reset</button> -->
+                        <!-- <button id="randomize" class="graph_buttons">Randomize</button> -->
+                    </div>
+                    
+                    <!-- right side div for the notes, refleections -->
+                    <div class="notes_container">
+                        <!-- record of today's goals -->
+                        <div class="todays_div todays_goals">
+                            <p class="goals_title">Today's Triumphs <span id="add_goal" style="cursor: pointer;">+</span></p>
+                            <div class="goals_list_div">
+                                <ul id="goals_list">
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- record of today's notes -->
+                        <div class="todays_div todays_notes">
+                            <p class="goals_title">
+                                Parchment of Purpose 
+                                <span id="add_note" style="cursor: pointer;">+</span>
+                            </p>
+                            <div class="notes_list_div">
+                                <textarea 
+                                    class="note_input" 
+                                    placeholder="Enter thy reflection....">
+                                </textarea>                                   
+                            </div>
+                        </div>
+
+                        <!-- record of today's reflection -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+</html>
